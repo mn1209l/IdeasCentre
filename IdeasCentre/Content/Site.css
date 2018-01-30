@@ -23,16 +23,68 @@ textarea {
     max-width: 280px;
 }
 
-.herobanner {
-    height:650px;
-    background-image:url("Images/pexels-photo-262669.jpeg");
-
-}
-
 .btn-primary {
     //background-color: #0099CC !important;
 }
 
 .panel-primary header {
     background-color: #0099CC !important;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+label {
+    padding: 15px 15px 15px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #0099CC;
+    color: white;
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+    input[type=submit]:hover {
+        background-color: #4599CC;
+    }
+
+.column-25 {
+    float: left;
+    width: 25%;
+    margin-top: 5px;
+}
+
+.column-75 {
+    float: right;
+    width: 75%;
+    margin-top: 5px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+footer{
+    text-align:center;
+}
+
+@media (max-width: 600px) {
+    .column-25, .column-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
 }

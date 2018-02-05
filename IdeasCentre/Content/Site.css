@@ -78,12 +78,27 @@ input[type=submit] {
     clear: both;
 }
 
+
+.div-center {
+    margin-left: auto;
+    margin-right: auto;
+    width:320px;
+}
+
+.div-table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 620px;
+}
+
+
 footer{
     text-align:center;
 }
 
 @media (max-width: 600px) {
-    .column-25, .column-75, input[type=submit] {
+    .column-25, .column-75,
+    input[type=submit] {
         width: 100%;
         margin-top: 0;
     }

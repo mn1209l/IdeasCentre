@@ -20,9 +20,23 @@ namespace IdeasCentre.Controllers
             return View();
         }
 
+        public ActionResult About2()
+        {
+            ViewBag.Message = "Share your Ideas";
+
+            return View();
+        }
+
+
         public ActionResult Contact()
         {
-            ViewBag.Message = "Upload your filoes";
+            ViewBag.Message = "Show your files";
+
+            return View();
+        }
+        public ActionResult Contact2()
+        {
+            ViewBag.Message = "Show your filoes";
 
             return View();
         }

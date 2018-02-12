@@ -14,23 +14,17 @@
 
 
 <div style="text-align: center;">
-    <div style="padding:20px 20px; background-color: #4599CC;color:white">
+    <div style="padding:20px 20px;margin-bottom: 50px;  background-color: #4599CC;color:white">
         <h1>Share your Ideas</h1>
     </div>
     <div class="div-center" style="padding:20px 20px;">
         <form action="">
             <div class="row">
                 <div class="column-25">
-                    <label for="forename">Forename</label>
+                    <label for="forename">Name</label>
                 </div>
                 <div class="column-75">
                     <input type="text" name="forename" placeholder="Your forename...">
-                </div>
-                <div class="column-25">
-                    <label for="surname">Surname</label>
-                </div>
-                <div class="column-75">
-                    <input type="text" name="surname" placeholder="Your surname...">
                 </div>
                 <div class="column-25">
                     <label for="category">Category</label>
@@ -47,7 +41,7 @@
                     <label for="file">File</label>
                 </div>
                 <div class="column-75">
-                    <input type="file" id="file" name="file">
+                    <input type="file" id="file" name="file" style="float:right;">
                 </div>
                 <div class="column-25">
                     <label for="comment">Comment</label>
@@ -56,21 +50,24 @@
                     <textarea id="comment" name="comment" placeholder="Write some comments here..." style="height:200px;"></textarea>
                 </div>
                 <div class="column-25">
-                    <input type="checkbox" id="checkbox" name="checkbox">
+                    
                 </div>
                 <div class="column-75">
-                    <label for="checkbox">Accepts Terms & Conditions</label>
+                    <label for="checkbox">Accepts Terms & Conditions</label><input type="checkbox" id="checkbox" name="checkbox">
                 </div>
                 <div class="column-25">
-                    <input type="checkbox" id="checkbox" name="checkbox">
+                    
                 </div>
                 <div class="column-75">
-                    <label for="checkbox">Click here if you want to do an Anonymous submit?</label>
+                    <label for="checkbox">Click here if you want to do an Anonymous submit?</label><input type="checkbox" id="checkbox" name="checkbox">
                 </div>
-                <div class="row">
-                    <asp:a href="" class="btn btn-warning btn-lg" style="width:190px !important;">Share your Ideas &raquo;</asp:a>
-                </div>            
+                
             </div>
+            <div class="form-group">
+                <div>
+                    <asp:a href="" class="btn btn-warning btn-lg" style="width:190px !important;">Share your Ideas &raquo;</asp:a>
+                </div>
+            </div> 
         </form>
     </div>
 </div>

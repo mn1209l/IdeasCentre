@@ -152,7 +152,11 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\pexels-photo-262669.jpeg" />
+    <Content Include="Content\Images\search-icon.png" />
+    <Content Include="Content\Images\search-icon1.png" />
+    <Content Include="Content\Images\search-icon2.png" />
     <Content Include="Content\Images\startspic.jfif" />
+    <Content Include="Content\search-icon2.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

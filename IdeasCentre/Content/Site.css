@@ -33,11 +33,13 @@ textarea {
 
 input[type=text], select, textarea {
     width: 100%;
-    padding: 15px;
+    padding: 15px 20px;
+    margin: 8px 0;
+    display:inline-block;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-    resize: vertical;
+  
 }
 
 label {
@@ -52,13 +54,19 @@ input[type=submit] {
     padding: 15px 20px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-    float: left;
+    margin: 8px 0;
+    cursor:pointer;
 }
 
     input[type=submit]:hover {
         background-color: #4599CC;
     }
+
+.div-form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding:20px;
+}
 
 .column-25 {
     float: left;
@@ -82,7 +90,7 @@ input[type=submit] {
 .div-center {
     margin-left: auto;
     margin-right: auto;
-    width:320px;
+    max-width:500px;
 }
 
 .div-table {

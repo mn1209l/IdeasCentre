@@ -8,88 +8,169 @@
             background-color:white;
         }
 
-        table{
-            border-collapse:collapse;
-            width:100%;
+
+        .search-container button {
+            float: right;
+            padding: 6px 10px;
+            margin: 8px;
+            margin-bottom: 40px;
+            border: none;
+            cursor: pointer;
         }
 
-        th, td{
-            padding:10px;
-            text-align:left;
-            border-bottom: 1px solid;
-        }
-        th {
-            background-color: #4599CC;
-        }
-
-        tr:hover {
+        form.search input[type=submit] {
             background-color: #f1f1f1;
+            width: 80%;
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid gray;
+            float: left;
         }
+
+        form.search button {
+            background: #4599CC;
+            color: white;
+            width: 20%;
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid gray;
+            border-left: none;
+            cursor: pointer;
+            float: left;
+        }
+
+            form.search button:hover {
+                background-color: #4090CC;
+            }
+
+        form.search::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+            .pagination a.active {
+                background-color: #f0ad4e;
+                color: white;
+                border-radius: 5px;
+            }
+
+            .pagination a:hover:not(.active) {
+                background-color: #ddd;
+                border-radius: 5px;
+            }
+
+
+        
     </style>
 </head>
 
 <div style="text-align: center;">
-    <div style="padding: 20px 20px;">
+    <div style="padding:20px 20px; background-color: #4599CC;color:white">
         <h1>View Ideas</h1>
     </div>
 </div>
+    <div class="container">
+        <div class="row">
+            <div style="float:right; padding-right:10px;padding-top:10px;">
+                <form class="search">
+                    <input type="text" placeholder="Search ..." name="search" />
+                    <button type="submit">
+                        <asp:i class="glyphicon glyphicon-search"></asp:i>
+                    </button>
+                </form>
 
-<div class="div-table">
-    <div>
-        <h2>Art</h2>
+            <div>
+                <asp:a href="" class="btn btn-warning btn-lg" style="width:252px !important;">Export Ideas &raquo;</asp:a>
+            </div>
+        </div>
     </div>
-    <div style="text-align: center;">
-        <table>
-            <thead>
-                <tr>
-                    <th>First Name</th>
-                    <th>Idea</th>
-                    <th>Date </th>
-                    <th>Do you like it?</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Jon</td>
-                    <td>Electronic for one day</td>
-                    <td>15 September, 2018</td>
-                    <td><span class="glyphicon glyphicon-thumbs-up"></span></td>
-                    <td><span class="glyphicon glyphicon-thumbs-down"></span></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div>
-        <h2>Electronics</h2>
-    </div>
-    <div style="text-align: center;">
-        <table>
-            <thead>
-                <tr>
-                    <th>First Name</th>
-                    <th>Idea</th>
-                    <th>Date </th>
-                    <th>Do you like it?</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Jon</td>
-                    <td>Electronic for one day</td>
-                    <td>15 September, 2018</td>
-                    <td><span class="glyphicon glyphicon-thumbs-up"></span></td>
-                    <td><span class="glyphicon glyphicon-thumbs-down"></span></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-<script>
+        <div class="div-table">
+            <div>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Idea</th>
+                            <th>Category</th>
+                            <th>Do you like it?</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jon</td>
+                            <td>Electronic for one day</td>
+                            <td>Art</td>
+                            <td>
+                                <span class="glyphicon glyphicon-thumbs-up"></span>&emsp;
+                                <span class="glyphicon glyphicon-thumbs-down"></span>&emsp;
+                                <span class="glyphicon glyphicon-comment"></span>
+                            </td>
+                            <td><p><asp:a class="btn btn-default" href="" data-toggle="modal" data-target="#ideasModel">See more &raquo;</asp:a></td>
 
-</script>
+                        </tr>
+                        <tr>
+                            <td>Jon</td>
+                            <td>Electronic for one day</td>
+                            <td>Electronics</td>
+                            <td>
+                                <span class="glyphicon glyphicon-thumbs-up"></span>&emsp;
+                                <span class="glyphicon glyphicon-thumbs-down"></span>&emsp;
+                                <span class="glyphicon glyphicon-comment"></span>
+                            </td>
+                            <td><p><asp:a class="btn btn-default" href="" data-toggle="modal" data-target="#ideasModel">See more &raquo;</asp:a></td>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+
+                <!--modal-->
+                <div class="modal fade" id="ideasModel" role="dialog">
+                    <div class="modal-dialog"></div>
+                    <!--modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Ideas Detail</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>This is the idea related with.....blal  bla bla.....</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="div-center">
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>    </div>
+   
+    <script>
+
+    </script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
